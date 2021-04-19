@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="primaryPane" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.PrimaryController">
+   <children>
+      <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: black;">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.0" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="329.0" minWidth="10.0" prefWidth="329.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="168.0" minHeight="10.0" prefHeight="136.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+          <children>
+            <Label text="Welcome to the d20 System Character Generator" textAlignment="CENTER" textFill="#f5f3f3" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Old English Text MT" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnDnD" alignment="CENTER" mnemonicParsing="false" onAction="#dndClicked" text="Dungeons &amp; Dragons" textAlignment="CENTER" textOverrun="CLIP" wrapText="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="btnPF" mnemonicParsing="false" onAction="#pfClicked" text="Pathfinder" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </GridPane.margin>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+            </Button>
+            <ImageView fx:id="ivDnD" fitHeight="150.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../pics/d.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="ivPF" fitHeight="150.0" fitWidth="200.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+               <image>
+                  <Image url="@../pics/P.png" />
+               </image>
+            </ImageView>
+            <Label maxHeight="-Infinity" minHeight="-Infinity" prefHeight="65.0" prefWidth="222.0" text="Select a system to create a character" textAlignment="CENTER" textFill="#fcfafa" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Old English Text MT" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

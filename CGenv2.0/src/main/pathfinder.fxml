@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pfPrimPane" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.PFController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <center>
+            <SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <TextArea fx:id="tfScores" editable="false" layoutY="53.0" onMouseClicked="#generate" prefHeight="270.0" prefWidth="175.0" text="Click Here to generate a set of ability scores." wrapText="true" />
+                        <Button fx:id="btnAccept" layoutX="14.0" layoutY="347.0" mnemonicParsing="false" onAction="#acceptClicked" text="Accept" />
+                        <Button fx:id="btnDecline" layoutX="109.0" layoutY="347.0" mnemonicParsing="false" onAction="#declineClicked" text="Decline" />
+                        <Label layoutX="28.0" layoutY="21.0" text="Rolls Generated" textAlignment="CENTER">
+                           <font>
+                              <Font name="Old English Text MT" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <ImageView nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" smooth="false">
+                           <image>
+                              <Image url="@../pics/pflogo.jpg" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                        </ImageView>
+                        <Label layoutX="50.0" layoutY="115.0" text="STR" />
+                        <Label layoutX="300.0" layoutY="115.0" text="CHA" />
+                        <Label layoutX="250.0" layoutY="115.0" text="INT" />
+                        <Label layoutX="200.0" layoutY="115.0" text="WIS" />
+                        <Label layoutX="100.0" layoutY="115.0" text="DEX" />
+                        <Label layoutX="150.0" layoutY="115.0" text="CON" />
+                        <Button fx:id="btnGenerate" layoutX="275.0" layoutY="345.0" mnemonicParsing="false" onAction="#generateClicked" text="Generate" textAlignment="CENTER" />
+                        <ChoiceBox fx:id="classCBox" layoutX="50.0" layoutY="345.0" prefWidth="150.0" />
+                        <VBox layoutX="50.0" layoutY="130.0" prefHeight="200.0" prefWidth="42.0" style="-fx-border-color: black;">
+                           <children>
+                              <RadioButton fx:id="rbStr1" mnemonicParsing="false">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="rbStr2" mnemonicParsing="false">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="rbStr3" mnemonicParsing="false">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="rbStr4" mnemonicParsing="false">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="rbStr5" mnemonicParsing="false">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="rbStr6" mnemonicParsing="false">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="100.0" layoutY="130.0" prefHeight="200.0" prefWidth="42.0" style="-fx-border-color: black;">
+                           <children>
+                              <RadioButton fx:id="rbDex1" mnemonicParsing="false">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="rbDex2" mnemonicParsing="false">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="rbDex3" mnemonicParsing="false">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="rbDex4" mnemonicParsing="false">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="rbDex5" mnemonicParsing="false">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="rbDex6" mnemonicParsing="false">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="150.0" layoutY="130.0" prefHeight="200.0" prefWidth="42.0" style="-fx-border-color: black;">
+                           <children>
+                              <RadioButton fx:id="rbCon1" mnemonicParsing="false">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="rbCon2" mnemonicParsing="false">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="rbCon3" mnemonicParsing="false">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="rbCon4" mnemonicParsing="false">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="rbCon5" mnemonicParsing="false">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="rbCon6" mnemonicParsing="false">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="200.0" layoutY="130.0" prefHeight="200.0" prefWidth="42.0" style="-fx-border-color: black;">
+                           <children>
+                              <RadioButton fx:id="rbWis1" mnemonicParsing="false">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="rbWis2" mnemonicParsing="false">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="rbWis3" mnemonicParsing="false">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="rbWis4" mnemonicParsing="false">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="rbWis5" mnemonicParsing="false">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="rbWis6" mnemonicParsing="false">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="250.0" layoutY="130.0" prefHeight="200.0" prefWidth="42.0" style="-fx-border-color: black;">
+                           <children>
+                              <RadioButton fx:id="rbInt1" mnemonicParsing="false">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="rbInt2" mnemonicParsing="false">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="rbInt3" mnemonicParsing="false">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="rbInt4" mnemonicParsing="false">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="rbInt5" mnemonicParsing="false">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="rbInt6" mnemonicParsing="false">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="300.0" layoutY="130.0" prefHeight="200.0" prefWidth="42.0" style="-fx-border-color: black;">
+                           <children>
+                              <RadioButton fx:id="rbCha1" mnemonicParsing="false">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="rbCha2" mnemonicParsing="false">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="rbCha3" mnemonicParsing="false">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="rbCha4" mnemonicParsing="false">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="rbCha5" mnemonicParsing="false">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="rbCha6" mnemonicParsing="false">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="statsBox" layoutX="0.0" layoutY="130.0" prefHeight="200.0" prefWidth="42.0" style="-fx-border-color: black;">
+                           <children>
+                              <Label fx:id="lblStat1">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="lblStat2">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="lblStat3">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="lblStat4">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="lblStat5">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="lblStat6">
+                                 <padding>
+                                    <Insets top="12.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <Button fx:id="btnSet" layoutX="356.0" layoutY="145.0" mnemonicParsing="false" onAction="#setScores" text="Set" />
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </center>
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem fx:id="loadMenuItem" mnemonicParsing="false" onAction="#onLoad" text="Load" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="quitMenuItem" mnemonicParsing="false" onAction="#onQuit" text="Quit" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="Help">
+                     <items>
+                        <MenuItem fx:id="aboutMenuItem" mnemonicParsing="false" onAction="#aboutSelected" text="About" />
+                     </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

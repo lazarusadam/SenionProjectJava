@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.AboutController">
+   <children>
+      <Button fx:id="okButton" layoutX="500.0" layoutY="350.0" mnemonicParsing="false" onAction="#okPressed" prefWidth="50.0" text="OK" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="75.0" />
+      <Label alignment="CENTER" layoutX="264.0" layoutY="141.0" text="d20 Character Generator&#10;Version 1.0&#10;&#10;Written and Developed by Kevin O’Brien&#10;Copyright 2021&#10;&#10;No reproduction permitted without consent&#10;" textAlignment="CENTER" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="286.0" layoutY="280.0" text="Presented at the MSU-Moorhead Student Academic Conference 2021" textAlignment="CENTER" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
