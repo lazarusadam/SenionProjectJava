@@ -18,6 +18,11 @@ This project is never expected to be completely finished as there are constant u
 Current iteration makes use of character generation methods and the existing premade character sheet templates.
 Only generic base character archetypes are created with no racial component.
 
+Archetypes:
+  Fighter
+  Healer
+  Mage
+  Rogue
 -------------------------------------------------------------------------------------------------------------
 
 DLM: 4/18/2021
